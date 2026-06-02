@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<title>Você caiu em um golpe</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    background:#111;
+    color:white;
+}
+
+h1{
+    color:red;
+    margin-bottom:20px;
+}
+
+.info{
+    margin:25px 0;
+    padding:20px;
+    background:#222;
+    border-radius:8px;
+}
+
+.info p{
+    margin:10px 0;
+}
+
+ul{
+    text-align:left;
+    display:inline-block;
+    margin-top:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="result">
+
+        <h1>⚠ VOCÊ CAIU EM UM GOLPE!</h1>
+
+        <h2>Esse cupom nunca existiu.</h2>
+
+        <p>
+            Se este fosse um golpe real, seus dados poderiam ter sido roubados.
+        </p>
+
+        <div class="info">
+
+            <p><strong>Nome:</strong> <span id="nome"></span></p>
+
+            <p><strong>CPF:</strong> <span id="cpf"></span></p>
+
+            <p><strong>Email:</strong> <span id="email"></span></p>
+
+        </div>
+
+        <h3>Sinais do golpe:</h3>
+
+        <ul>
+            <li>Oferta boa demais para ser verdade</li>
+            <li>Pressão para agir rapidamente</li>
+            <li>Solicitação de dados pessoais</li>
+            <li>Pedido de senha para liberar prêmio</li>
+        </ul>
+
+        <br><br>
+
+        <h2>Você sobreviveria à internet?</h2>
+
+    </div>
+
+</div>
+
+<script>
+
+document.getElementById("nome").innerText =
+localStorage.getItem("nome");
+
+document.getElementById("cpf").innerText =
+localStorage.getItem("cpf");
+
+document.getElementById("email").innerText =
+localStorage.getItem("email");
+
+</script>
+
+</body>
+</html>

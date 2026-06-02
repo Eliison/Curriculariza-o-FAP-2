@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Receber Cupom</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-box">
+
+        <h2>Receber Cupom de R$200</h2>
+
+        <br>
+
+        <input id="nome" placeholder="Nome">
+
+        <input id="cpf" placeholder="CPF">
+
+        <input id="email" placeholder="Email">
+
+        <input id="senha"
+               type="password"
+               placeholder="Senha">
+
+        <button id="continuar">
+            RECEBER CUPOM
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+document.getElementById("continuar")
+.addEventListener("click", ()=>{
+
+    localStorage.setItem(
+        "nome",
+        document.getElementById("nome").value
+    );
+
+    localStorage.setItem(
+        "cpf",
+        document.getElementById("cpf").value
+    );
+
+    localStorage.setItem(
+        "email",
+        document.getElementById("email").value
+    );
+
+    window.location.href="golpe.html";
+
+});
+
+</script>
+
+</body>
+</html>
